@@ -490,3 +490,9 @@ git remote add origin https://github.com/rajeshwari229080/future-AI-agents-inter
 git branch -M main
 git push -u origin main
 ```
+
+---
+
+## 21. License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for complete details.
