@@ -95,7 +95,11 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 @app.get("/", response_class=HTMLResponse, tags=["Dashboard"], include_in_schema=False)
 async def serve_dashboard(request: Request):
     """Serves the administrative frontend dashboard."""
-    return templates.TemplateResponse("index.html", {"request": request, "app_name": settings.APP_NAME})
+    return templates.TemplateResponse(
+        request=request,
+        name="index.html",
+        context={"app_name": settings.APP_NAME}
+    )
 
 
 @app.get("/health", tags=["Health"], summary="API Health Check")
